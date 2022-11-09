@@ -9,8 +9,8 @@ function Order() {
     setNum(num + 1);
   };
   const handleClickReduce = () => {
-    setNum(num - 1);
-  };
+    
+  }setNum(num - 1);
   return (
     <div className={cx("wrapper")}>
       <div className={cx("burger")}>

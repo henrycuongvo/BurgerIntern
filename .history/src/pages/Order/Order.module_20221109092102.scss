@@ -66,11 +66,10 @@
 .selection {
   margin-top: 20px;
   border: 2px solid #333;
+  display: flex;
+  flex-direction: row;
 }
 .wrapper-select {
-  padding-bottom: 20px;
-}
-.select {
   display: flex;
   flex-direction: row;
   margin-top: 20px;

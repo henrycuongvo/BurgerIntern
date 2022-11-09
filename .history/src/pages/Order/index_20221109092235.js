@@ -5,12 +5,10 @@ import { useState } from "react";
 const cx = classNames.bind(styles);
 function Order() {
   const [num, setNum] = useState(0);
-  const handleClickPlus = () => {
-    setNum(num + 1);
-  };
-  const handleClickReduce = () => {
-    setNum(num - 1);
-  };
+  // const handlePlusIngredient = () => {
+  //   setNum(num + 1);
+  // };
+
   return (
     <div className={cx("wrapper")}>
       <div className={cx("burger")}>
@@ -29,7 +27,7 @@ function Order() {
           <div className={cx("showPrice")}>{/* show Total Price */}</div>
         </div>
 
-        {/*Selection */}
+        {/*Table Selection */}
 
         <div className={cx("selection")}>
           <div className={cx("wrapper-select")}>
@@ -38,9 +36,7 @@ function Order() {
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
                 <div className={cx("show-number")}>{num}</div>
-                <Button onClick={handleClickPlus} more>
-                  More
-                </Button>
+                <Button more>More</Button>
               </div>
             </div>
             <div className={cx("select")}>
@@ -48,9 +44,7 @@ function Order() {
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
                 <div className={cx("show-number")}>{num}</div>
-                <Button onClick={handleClickPlus} more>
-                  More
-                </Button>
+                <Button more>More</Button>
               </div>
             </div>
             <div className={cx("select")}>
@@ -58,9 +52,7 @@ function Order() {
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
                 <div className={cx("show-number")}>{num}</div>
-                <Button onClick={handleClickPlus} more>
-                  More
-                </Button>
+                <Button more>More</Button>
               </div>
             </div>
             <div className={cx("select")}>
@@ -68,9 +60,7 @@ function Order() {
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
                 <div className={cx("show-number")}>{num}</div>
-                <Button onClick={handleClickPlus} more>
-                  More
-                </Button>
+                <Button more>More</Button>
               </div>
             </div>
           </div>
