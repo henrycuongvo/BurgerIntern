@@ -5,19 +5,15 @@ import Button from "../../components/Button";
 import { useState } from "react";
 const cx = classNames.bind(styles);
 const Order = () => {
-  const [num, setNum] = useState({
-    num1: 0,
-    num2: 0,
-    num3: 0,
-    num4: 0,
-  });
-  console.log(setNum);
+  const [num, setNum] = useState(0);
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+  const [num3, setNum3] = useState(0);
 
-  const handleClickLess = (data) => {
-    setNum({ ...num, [data]: num[data] - 1 });
-  };
-  const handleClickMore = (data) => {
-    setNum({ ...num, [data]: num[data] + 1 });
+  //khai báo từng state thì dở quá nên t không khai báo, muốn gộp vô thành 1 state chung rồi truyền dữ liệu vô á
+
+  const handleClickPlus = (num, num1, num2, num3, ...Number) => {
+    setNum(num + 1);
   };
   return (
     <div className={cx("wrapper")}>
@@ -44,11 +40,9 @@ const Order = () => {
             <div className={cx("select")}>
               <span> Salad </span>
               <div className={cx("wrapper-button")}>
-                <Button onClick={() => handleClickLess("num1")} less>
-                  Less
-                </Button>
-                <div className={cx("show-number")}>{num.num1}</div>
-                <Button onClick={() => handleClickMore("num1")} more>
+                <Button less>Less</Button>
+                <div className={cx("show-number")}>{num}</div>
+                <Button onClick={(num) => handleClickPlus(num)} more>
                   More
                 </Button>
               </div>
@@ -57,8 +51,8 @@ const Order = () => {
               <span> Bacon </span>
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
-                <div className={cx("show-number")}>{num.num2}</div>
-                <Button onClick={() => handleClickMore("num2")} more>
+                <div className={cx("show-number")}>{}</div>
+                <Button onClick={handleClickPlus} more>
                   More
                 </Button>
               </div>
@@ -67,7 +61,7 @@ const Order = () => {
               <span> Cheese</span>
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
-                <div className={cx("show-number")}>{num}</div>
+                <div className={cx("show-number")}>{}</div>
                 <Button more>More</Button>
               </div>
             </div>
@@ -75,7 +69,7 @@ const Order = () => {
               <span> Meat</span>
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
-                <div className={cx("show-number")}>{num}</div>
+                <div className={cx("show-number")}>{}</div>
                 <Button more>More</Button>
               </div>
             </div>

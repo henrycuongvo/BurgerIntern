@@ -11,7 +11,8 @@ const Order = () => {
     num3: 0,
     num4: 0,
   });
-  console.log(setNum);
+
+  //khai báo từng state thì dở quá nên t không khai báo, muốn gộp vô thành 1 state chung rồi truyền dữ liệu vô á
 
   const handleClickLess = (data) => {
     setNum({ ...num, [data]: num[data] - 1 });
@@ -44,11 +45,9 @@ const Order = () => {
             <div className={cx("select")}>
               <span> Salad </span>
               <div className={cx("wrapper-button")}>
-                <Button onClick={() => handleClickLess("num1")} less>
-                  Less
-                </Button>
+                <Button less>Less</Button>
                 <div className={cx("show-number")}>{num.num1}</div>
-                <Button onClick={() => handleClickMore("num1")} more>
+                <Button onClick={handleClickMore("num1")} more>
                   More
                 </Button>
               </div>
@@ -58,7 +57,7 @@ const Order = () => {
               <div className={cx("wrapper-button")}>
                 <Button less>Less</Button>
                 <div className={cx("show-number")}>{num.num2}</div>
-                <Button onClick={() => handleClickMore("num2")} more>
+                <Button onClick={handleClickMore("num2")} more>
                   More
                 </Button>
               </div>

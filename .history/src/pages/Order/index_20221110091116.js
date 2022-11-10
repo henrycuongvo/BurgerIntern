@@ -13,6 +13,8 @@ const Order = () => {
   });
   console.log(setNum);
 
+  //khai báo từng state thì dở quá nên t không khai báo, muốn gộp vô thành 1 state chung rồi truyền dữ liệu vô á
+
   const handleClickLess = (data) => {
     setNum({ ...num, [data]: num[data] - 1 });
   };
